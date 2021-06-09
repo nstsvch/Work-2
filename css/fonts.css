@@ -1,0 +1,20 @@
+@font-face {
+  font-family: gilroy-light;
+  src: url(../fonts/gilroy-light.ttf);
+}
+
+@font-face {
+  font-family: gilroy-extrabold;
+  src: url(../fonts/Gilroy-Extrabold.woff2) format('woff2'),
+      url(../fonts/Gilroy-Extrabold.woff) format('woff')
+}
+
+@font-face {
+  font-family: dinpro;
+  src: url(../fonts/dinpro.ttf);
+}
+
+@font-face {
+  font-family: dinpro-regular;
+  src: url(../fonts/dinpro-regular.otf);
+}
