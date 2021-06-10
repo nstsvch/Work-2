@@ -458,9 +458,6 @@ html, body {
   img {
     width: 50%;
   }
-  .slash {
-    margin: 0px 25px;
-  } 
 }
 
 @media only screen and (min-device-width : 1025px) and (min-device-height : 1025px)  and (max-device-width : 2048px) and (max-device-height : 2048px) {
