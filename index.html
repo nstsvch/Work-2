@@ -16,15 +16,15 @@
                     <div class="bakti"><img src="../onpoint/img/bg/1/bakti_1.png"></div>
                     <div class="layer"><img src="../onpoint/img/bg/1/Layer 4.png"></div>
                     <div class="container">
-                        <div class="header">          
+                        <header class="header">
                             <div class="header-row">
                                 <ul class="top">
-                                    <li class="top-link home"><a class="top-home" href="index.html"><img src="./img/Shape 1.png"></a></li>
-                                    <li class="top-link slash"><a class="top-home"><img src="./img/Shape 2.png"></a></li>
-                                    <li class="top-link project top-home">project</li>
+                                    <li class="home"><a class="top-home" href="index.html"><img src="./img/Shape 1.png" style="width:2vw;"></a></li>
+                                    <li class="slash"><a class="top-home"><img src="./img/Shape 2.png" style="height:2vh;"></a></li>
+                                    <li class="project"><a class="top-home">project</a></li>
                                 </ul>
-                            </div>
-                        </div>    
+                            </div> 
+                        </header>   
                         <div class="content">
                             <div class="content-hello">Привет,</div>
                             <div class="content-title">Это <span class="not"> не </span>коммерческое задание 
@@ -45,19 +45,21 @@
                         <header class="header">
                             <div class="header-row">
                                 <ul class="top">
-                                    <li class="top-link home"><a class="top-home" href="index.html"><img src="./img/Shape 1.png" alt=""></a></li>
-                                    <li class="top-link slash"><a class="top-home"><img src="./img/Shape 2.png" alt=""></a></li>
-                                    <li class="top-link project"><a class="top-home">project</a></li>
+                                    <li class="home"><a class="top-home" href="index.html"><img src="./img/Shape 1.png" style="width:2vw;"></a></li>
+                                    <li class="slash"><a class="top-home"><img src="./img/Shape 2.png" style="height:2vh;"></a></li>
+                                    <li class="project"><a class="top-home">project</a></li>
                                 </ul>
                             </div> 
                         </header>
-                        <div class="content">
+                        <div class="content-second">
                             <p class="content-hello">Текст сообщения</p>
                             <div class="content-text">
-                                <!-- <button class="scrolling"></button> onscroll="Scroll()"  -->
+                                <!-- <button class="scrolling" id="scrolling" onscroll="scrollTo()"></button> -->
                                 <div class="scrolling-line" id="scrolling-line"></div>
+                                <div class="white"></div>
                                 <div class="sperm-block">
-                                    <div class="sperm-info"><span class="spermatozoid">Сперматозоид</span> (от др.-греч. σπέρμα род. п. σπέρματος здесь «сперма» 
+                                    <div class="sperm-info">
+                                        <p><span class="spermatozoid">Сперматозоид</span> (от др.-греч. σπέρμα род. п. σπέρματος здесь «сперма» 
                                         + ζωή «жизнь» + εδος «вид, облик», лат. spermatozoon, spermium) — 
                                         мужская половая клетка (гамета) размножающихся посредством 
                                         оогамии организмов. <br>
@@ -76,8 +78,8 @@
                                         В широком смысле слова по традиции сперматозоидами иногда на-
                                         зывают мужские половые клетки также у растений, к ним применя-
                                         ют также термины спермии или антерозоиды (их применяют также 
-                                        к традиционно сближавшимся с растениями грибам). <br><hr>
-                                        https://ru.wikipedia.org/wiki/сперматозоид
+                                        к традиционно сближавшимся с растениями грибам).</p>
+                                        <p>https://ru.wikipedia.org/wiki/сперматозоид</p>
                                     </div>
                                 </div>
                             </div>
@@ -93,9 +95,9 @@
                         <header class="header">
                             <div class="header-row">
                                 <ul class="top">
-                                    <li class="top-link home"><a class="top-home" href="index.html"><img src="./img/Shape 1.png"></a></li>
-                                    <li class="top-link slash"><a class="top-home"><img src="./img/Shape 2.png"></a></li>
-                                    <li class="top-link project"><a class="top-home">project</a></li>
+                                    <li class="home"><a class="top-home" href="index.html"><img src="./img/Shape 1.png" style="width:2vw;"></a></li>
+                                    <li class="slash"><a class="top-home"><img src="./img/Shape 2.png" style="height:2vh;"></a></li>
+                                    <li class="project"><a class="top-home">project</a></li>
                                 </ul>
                             </div> 
                         </header>
@@ -134,37 +136,51 @@
                         <header class="header">
                             <div class="header-row">
                                 <ul class="top">
-                                    <li class="top-link home"><a class="top-home" href="index.html"><img src="./img/Shape 1.png"></a></li>
-                                    <li class="top-link slash"><a class="top-home"><img src="./img/Shape 2.png"></a></li>
-                                    <li class="top-link project"><a class="top-home">project</a></li>
+                                    <li class="home"><a class="top-home" href="index.html"><img src="./img/Shape 1.png" style="height:2vh;"></a></li>
+                                    <li class="slash"><a class="top-home"><img src="./img/Shape 2.png" style="height:2vh;"></a></li>
+                                    <li class="project"><a class="top-home">project</a></li>
                                 </ul>
                             </div> 
                         </header>
-                        <div class="fourth-content">
+                        <div class="fourth-content" id="fourth-content">
                             <p class="content-hello" style="margin-left: 27%; padding-top: 5%;">Преимущества</p>
-                            <button class="exit">x</button>
+                            <button class="exit"></button>
                             <h3 class="brend-title">Brend<span class="not">XY</span></h3>
                             <div class="advantages">
-                               <ul class="advantages_list">
-                                   <li class="advantages_number">01</li>
-                                   <li class="advantages_text">Самое важное и ключевое преимущество нашего препарата</li>
-                                   <li class="advantages_number">02</li>
-                                   <li class="advantages_text">Второе по важности преимущество</li>
-                                   <li class="advantages_number">03</li>
-                                   <li class="advantages_text">Еще одно важное преимущество препарата</li>
-                               </ul>
+                                <div class="advantages-content first-list" id="first-list">
+                                    <ul class="advantages_list">
+                                        <li class="advantages_number">01</li>
+                                        <li class="advantages_text">Самое важное и ключевое преимущество нашего препарата</li>
+                                        <li class="advantages_number">02</li>
+                                        <li class="advantages_text">Второе по важности преимущество</li>
+                                        <li class="advantages_number">03</li>
+                                        <li class="advantages_text">Еще одно важное преимущество препарата</li>
+                                    </ul>
+                                </div>
+                                <div class="advantages-content second-list" id="second-list">
+                                    <ul class="advantages_list">
+                                        <li class="advantages_number">04</li>
+                                        <li class="advantages_text">Еще одно не менее важное преимущество препарата</li>
+                                        <li class="advantages_number">05</li>
+                                        <li class="advantages_text">Еще одно важное преимущество препарата</li>
+                                        <li class="advantages_number">06</li>
+                                        <li class="advantages_text">Еще одно важное преимущество препарата</li>
+                                    </ul>
+                                </div>
                                <div class="arrows">
-                                <button class="arrow left"></button>
-                                <button class="circle"></button>
-                                <button class="circle"></button>
-                                <button class="arrow right"></button>
+                                <button class="arrow left" onclick="previousSlide()"; onclick='showPagination()'></button>
+                                <div class="pagination">
+                                    <a class="pagination-item pag-left"></a>
+                                    <a class="pagination-item pag-right"></a>
+                                </div>
+                                <button class="arrow right" onclick="nextSlide()"; onclick='showPagination()'></button>
                                </div>
                             </div>
                         </div>
                         <footer class="logo"><img src="../onpoint/img/logo.svg"></footer>
                     </div> 
                 </div> 
-            </div>  
+            </div>
         </div>
     </div>
 </body>

@@ -72,4 +72,53 @@ sliderlist.style.transform = 'translateX(0px)';
 
 slider.addEventListener('touchstart', swipeStart);
 slider.addEventListener('mousedown', swipeStart);
+ 
+//Пагинация
+let slideNumber = 1;
+let pagination_item = document.getElementsByClassName('pagination-item');
+let first_block = document.querySelector('.advantages .first-list');
+let second_block = document.querySelector('.advantages .second-list');
+
+showSlides(slideNumber);
+
+function nextSlide() {
+    showSlides(slideNumber += 1);
+    if (first_block.style.display != 'block') {
+      pagination_item[0].style.background ="transparent";
+      pagination_item[0].style.border ="1px solid black";
+      pagination_item[1].style.background ="#ff6a9f";
+      pagination_item[1].style.border ="none";
+    }
+}
+function previousSlide() {
+    showSlides(slideNumber -= 1);
+    if (first_block.style.display == 'block') {
+      pagination_item[0].style.background ="#ff6a9f";
+      pagination_item[0].style.border ="none";
+      pagination_item[1].style.background ="transparent";
+      pagination_item[1].style.border ="1px solid black";
+    }
+}
+function currentSlide(n) {
+  showSlides(slideNumber = n);
+}
+
+function showSlides(n) {
+    let slides = document.getElementsByClassName("advantages-content");
+    if (n > slides.length) {
+      slideNumber = 1;
+    }
+    if (n < 1) {
+      slideNumber = slides.length;
+    }
+    for (let slide of slides) {
+        slide.style.display = "none";
+    }
+    if (n = 1) {
+      pagination_item[0].style.background ="#ff6a9f";
+      pagination_item[0].style.border ="none";
+    }
+
+    slides[slideNumber - 1].style.display = "block";
+}
 
