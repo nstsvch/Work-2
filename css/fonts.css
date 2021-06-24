@@ -18,3 +18,8 @@
   font-family: dinpro-regular;
   src: url(../fonts/dinpro-regular.otf);
 }
+
+@font-face {
+  font-family: circle;
+  src: url(../fonts/circle.ttf);
+}

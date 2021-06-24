@@ -13,7 +13,7 @@ let sliderlist = document.querySelector('.slidelist');
 let slides = document.querySelectorAll('.slide');
 slideWidth = slides[0].offsetWidth,
 slideIndex = 0,
-posInit = 0,
+position = 0,
 posX1 = 0,
 posX2 = 0,
 posFinal = 0,
@@ -25,13 +25,13 @@ getEvent = function() {
 },
 
 slide = function() {
-  sliderlist.style.transition = 'transform .5s';
-  sliderlist.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+  sliderlist.style.transition = "transform .5s";
+  sliderlist.style.transform = "translateX(-${slideIndex * slideWidth}px)";
 },
 
 swipeStart = function() {
   let evt = getEvent();
-  posInit = posX1 = evt.clientX;
+  position = posX1 = evt.clientX;
   sliderlist.style.transition = '';
   document.addEventListener('touchmove', swipeAction);
   document.addEventListener('mousemove', swipeAction);
@@ -45,34 +45,33 @@ swipeAction = function() {
   transform = +style.match(trfRegExp)[0];
   posX2 = posX1 - evt.clientX;
   posX1 = evt.clientX;
-  sliderlist.style.transform = `translateX(${transform - posX2}px)`;
+  sliderlist.style.transform = "translateX(${transform - posX2}px)";
 },
 
 swipeEnd = function() {
-  posFinal = posInit - posX1;
+  posFinal = position - posX1;
   document.removeEventListener('touchmove', swipeAction);
   document.removeEventListener('mousemove', swipeAction);
   document.removeEventListener('touchend', swipeEnd);
   document.removeEventListener('mouseup', swipeEnd);
 
   if (Math.abs(posFinal) > posThreshold) {
-    if (posInit < posX1) {
+    if (position < posX1) {
       slideIndex--;
-    } else if (posInit > posX1) {
+    } else if (position > posX1) {
       slideIndex++;
     }
   }
 
-  if (posInit !== posX1) {
+  if (position !== posX1) {
     slide();
   }
 };
 
 sliderlist.style.transform = 'translateX(0px)';
-
 slider.addEventListener('touchstart', swipeStart);
 slider.addEventListener('mousedown', swipeStart);
- 
+
 //Пагинация
 let slideNumber = 1;
 let pagination_item = document.getElementsByClassName('pagination-item');
@@ -122,3 +121,35 @@ function showSlides(n) {
     slides[slideNumber - 1].style.display = "block";
 }
 
+//Кнопка - Подробнее
+let slide4 = document.getElementById("slide4");
+let popup = document.querySelector('.popup');
+let but = document.querySelector('.detailed');
+let slide3 = document.getElementById("slide3");
+
+function ButtonClick() {
+  popup.style.visibility = 'visible';
+  popup.style.opacity = '1';
+  slide3.style.position = 'fixed';
+  // slide4.scrollIntoView({block: "center"});
+}
+but.addEventListener('click', ButtonClick);
+
+//Exit
+let exit = document.querySelector('.exit');
+function Exit() {
+  slide3.style.position = 'relative';
+}
+exit.addEventListener('click', Exit);
+
+//Запуск анимации на слайдах
+// const animation1 = document.querySelector('p.animation');
+// animation.addEventListener('animationstart', () => {
+//   animationEventLog.textContent = `${animationEventLog.textContent}'animation started' `;
+// });
+
+//Scroll
+/*
+let block = document.getElementById("sperm-info");
+block.scrollTop = block.scrollHeight;
+*/
